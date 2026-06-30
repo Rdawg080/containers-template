@@ -28,5 +28,13 @@
 			"tag": "v1"
 		}
 	],
-	"upload_source_maps": true
+	"upload_source_maps": true,
+	"vars": {
+		// Non-secret Reddit configuration; override per-environment as needed
+		"REDDIT_USER_AGENT": "cloudflare-worker-containers/1.0"
+	}
+	// Reddit secrets — set these with the Wrangler CLI before deploying:
+	//   wrangler secret put REDDIT_CLIENT_ID
+	//   wrangler secret put REDDIT_CLIENT_SECRET
+	// Create a Reddit app at https://www.reddit.com/prefs/apps (choose "script" type)
 }
